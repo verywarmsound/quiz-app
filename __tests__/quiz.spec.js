@@ -27,17 +27,3 @@ describe('Quiz App', () => {
         cy.contains('Quiz Summary').should('be.visible');
     });
 });
-```
-
-### 4. Update `package.json` Scripts
-
-Add scripts to run your tests:
-
-```json
-{
-    "scripts": {
-    "test": "jest",
-        "cypress:open": "cypress open",
-        "cypress:run": "cypress run"
-}
-}
