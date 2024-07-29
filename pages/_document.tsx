@@ -1,10 +1,9 @@
 
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { Html, Head, Main, NextScript } from 'next/document';
 import Footer from "../components/Footer";
 
-class MyDocument extends Document {
-    render() {
-        return (
+export default function Document() {
+    return (
             <Html lang="en">
                 <Head>
                     <link rel="manifest" href="/manifest.json"/>
@@ -20,6 +19,3 @@ class MyDocument extends Document {
             </Html>
         );
     }
-}
-
-export default MyDocument;

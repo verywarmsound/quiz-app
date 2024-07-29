@@ -11,7 +11,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         case 'GET':
             res.status(200).json(cleanedData);
             break;
-
         case 'POST':
             try {
                 const newQuestion: Question = req.body;
@@ -21,7 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 res.status(400).json({ error: 'Invalid data format' });
             }
             break;
-
         case 'PUT':
             try {
                 const updatedQuestion: Question = req.body;
@@ -36,7 +34,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 res.status(400).json({ error: 'Invalid data format' });
             }
             break;
-
         case 'DELETE':
             try {
                 const question = decodeURIComponent(req.query.id as string);
@@ -51,7 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 res.status(400).json({ error: 'Invalid data format' });
             }
             break;
-
         default:
             res.status(405).json({ error: 'Method not allowed' });
             break;

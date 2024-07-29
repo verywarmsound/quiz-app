@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
+const queryClient = new QueryClient();
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps<{}>) {
     useEffect(() => {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -18,8 +20,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         }
     }, []);
 
-    // @ts-ignore
-    return <Component {...pageProps} />;
+
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Component {...pageProps} />
+        </QueryClientProvider>
+
+    );
 }
 
 export default MyApp;
+
+
