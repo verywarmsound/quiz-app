@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState, useMemo } from 'react';
-import { QuizContainer, QuestionText, AnswerButton, TrueFalseButton, TextInput, SubmitButton, SummaryContainer, SummaryText, RestartButton, QuestionsLeftCounter } from './QuizStyles';
+import { QuizContainer, QuestionText, AnswerButton, TrueFalseButton, TextInput, SubmitButton, SummaryContainer, SummaryText, RestartButton, QuestionsLeftCounter } from '../styles/QuizStyles';
 import { useQuestions } from '../hooks/useQuestions';
 
 export default function Quiz() {
@@ -45,7 +45,7 @@ export default function Quiz() {
                     <SummaryText>Correct Answers: {correctAnswers}</SummaryText>
                     <SummaryText>Incorrect Answers: {incorrectAnswers}</SummaryText>
                     <SummaryText>Total Questions Answered: {correctAnswers + incorrectAnswers}</SummaryText>
-                    <SummaryText>Final Score: {((correctAnswers / (correctAnswers + incorrectAnswers)) * 100).toFixed(2)}%</SummaryText>
+                    <SummaryText>Final Score: {((correctAnswers / (correctAnswers + incorrectAnswers)) * 100).toFixed(0)}%</SummaryText>
                     <RestartButton onClick={() => window.location.reload()}>Restart Quiz</RestartButton>
                 </SummaryContainer>
             ) : (

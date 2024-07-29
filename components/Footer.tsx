@@ -25,6 +25,7 @@ const Footer = () => (
         <AttributionLink href="https://www.flaticon.com/free-icons/quiz" title="quiz icons">
             Quiz icons created by Freepik - Flaticon
         </AttributionLink>
+        <p>Made by Olga Korpacheva</p>
     </FooterContainer>
 );
 
