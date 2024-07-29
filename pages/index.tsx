@@ -1,7 +1,8 @@
 import React from 'react';
 import Quiz from '../components/Quiz';
 
-export default function Home() {
+const Home: React.FC = () => {
     return <Quiz />;
 };
 
+export default Home;
