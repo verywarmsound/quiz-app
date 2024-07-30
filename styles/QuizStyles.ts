@@ -6,7 +6,7 @@ export const QuizContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: rgba(245, 245, 245, 0.9); /* Slightly warm grey color with transparency */
+    background-color: rgba(245, 245, 245, 0.9); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 600px;
@@ -52,7 +52,7 @@ export const AnswerButton = styled.button<{ isCorrect?: boolean }>`
     background-color: ${(props) => (props.isCorrect ? '#4caf50' : '#258871')};
     color: white;
     border: none;
-    border-radius: 0; /* No rounding */
+    border-radius: 0; 
     padding: 20px;
     margin: 5px;
     cursor: pointer;

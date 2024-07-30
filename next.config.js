@@ -1,4 +1,3 @@
-const { GenerateSW } = require('workbox-webpack-plugin');
 const withPWA = require("next-pwa")({
     dest: "public",
     register: true,
@@ -14,7 +13,7 @@ const nextConfig = {
     },
     webpack: (config, { isServer }) => {
         if (!isServer) {
-            // Ensure GenerateSW is not called multiple times
+            const { GenerateSW } = require('workbox-webpack-plugin');
             const existingGenerateSW = config.plugins.find(plugin => plugin instanceof GenerateSW);
             if (!existingGenerateSW) {
                 config.plugins.push(

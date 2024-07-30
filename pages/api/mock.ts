@@ -4,7 +4,6 @@ import { cleanJsonData } from '../../utils/fixJsonData';
 import { QuizData, Question } from '../../types/quiz';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    // Clean the data before using it
     const cleanedData: QuizData = cleanJsonData(quizData);
 
     switch (req.method) {

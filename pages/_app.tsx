@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import GlobalStyles from '../styles/GlobalStyles';
 import Footer from '../components/Footer';
+import React from 'react';
 
 const queryClient = new QueryClient();
 

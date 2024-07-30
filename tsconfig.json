@@ -1,25 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "jsx": "preserve",
+    "module": "esnext",
+    "target": "es6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
     "incremental": true,
-    "preserveSymlinks": false
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
+  "extends": "./tsconfig.jest.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",

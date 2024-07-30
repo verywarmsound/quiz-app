@@ -1,15 +1,16 @@
 import { decodeHtmlEntities, cleanJsonData } from '../utils/fixJsonData';
+import { expect } from '@jest/globals';
 
 describe('decodeHtmlEntities', () => {
     test('decodes HTML entities correctly', () => {
         const input = 'This is a &quot;test&quot; string with &#039;entities&#039; and \\/slashes\\/.';
         const expectedOutput = 'This is a "test" string with \'entities\' and /slashes/.';
-        expect(decodeHtmlEntities(input)).toBe(expectedOutput);
+        expect(decodeHtmlEntities(input)).toEqual(expectedOutput);
     });
 
     test('returns the same string if no entities are present', () => {
         const input = 'This is a test string with no entities.';
-        expect(decodeHtmlEntities(input)).toBe(input);
+        expect(decodeHtmlEntities(input)).toEqual(input);
     });
 });
 
