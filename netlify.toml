@@ -1,12 +1,9 @@
 [build]
-command = "npm run build"
+command = "npm run install:legacy && npm run build"
 publish = "out"
 
 [context.production.environment]
 NODE_ENV = "production"
-
-[context.production]
-command = "npm run install:legacy && npm run build"
 
 [[redirects]]
 from = "/*"
