@@ -35,7 +35,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "install:legacy": "npm install --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
