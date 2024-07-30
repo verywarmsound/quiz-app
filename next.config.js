@@ -11,6 +11,7 @@ const nextConfig = {
     compiler: {
         removeConsole: process.env.NODE_ENV !== "development",
     },
+    output: 'export', // Add this line to support static export
     webpack: (config, { isServer }) => {
         if (!isServer) {
             const { GenerateSW } = require('workbox-webpack-plugin');
